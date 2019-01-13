@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700">
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <title>GMG Jaunvārdu Krājums</title>
+</head>
+<body>
+
+    <nav>
+        <div class="wrapper">
+            <h1>GMG Jaunvārdi</h1>
+            <i id="menu_toggle" class="fas fa-plus"></i>
+        </div>
+
+        <div class="add hidden">
+            <input id="word" type="text" placeholder="Jaunais vārds">
+            <select id="word_type">
+                <option selected value="Lietvārds">Lietvārds</option>
+                <option value="Īpašības vārds">Īpašības vārds</option>
+                <option value="Apstākļa vārds">Apstākļa vārds</option>
+                <option value="Darbības vārds">Darbības vārds</option>
+                <option value="Īpašvārds">Īpašvārds</option>
+                <option value="Cits">Cits</option>
+            </select>
+            <input id="definition" type="text" placeholder="Definīcija">
+            <input id="example" type="text" placeholder="Piemērs">
+            <button onclick="addWord()">Pievienot</button>
+        </div>
+
+    </nav>
+
+    <div class="loading_screen">
+        <div class="loader_wrapper">
+            <span>G</span>
+            <div class="circle_1"></div>
+            <div class="circle_2"></div>
+            <div class="circle_3"></div>
+            <!-- <div class="circle_4"></div> -->
+        </div>
+    </div>
+
+    <main class="dictionary">
+
+        <div class="items">
+            <!-- <div class="item">
+                <h2>Kicenieks</h2>
+                <span>Lietvārds</span>
+                <p class="def">Definīcija šim vārdam</p>
+                <h3>Piemērs:</h3>
+                <p>asda sjdk aj daskdjas kdak ajsdkajs</p>
+            </div> -->
+        </div>
+    </main>
+
+    <footer>
+        <p>Veidoja Reinards Jānis Saulītis 2019</p>
+    </footer>
+    
+    <script src="https://www.gstatic.com/firebasejs/5.7.3/firebase.js"></script>
+    <script>
+    var config = {
+        apiKey: "AIzaSyCvUYPCi4c96thaEj9S0bm04RWlsvfqduQ",
+        authDomain: "jaunvardi-3727e.firebaseapp.com",
+        databaseURL: "https://jaunvardi-3727e.firebaseio.com",
+        projectId: "jaunvardi-3727e",
+        storageBucket: "jaunvardi-3727e.appspot.com",
+        messagingSenderId: "724641619091"
+    };
+    firebase.initializeApp(config);
+    </script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="js/md5.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
